@@ -1,4 +1,3 @@
-module Sliding_Pieces 
-    
+module Sliding_Pieces
 
 end
