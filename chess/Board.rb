@@ -12,12 +12,14 @@ class Board
 
     end
 
+    # references, place_piece from Piece Class method
     def place_piece(piece, pos)
         raise 'position not empty' unless empty?(pos)
-
+    
         self[pos] = piece
     end
 
+    # Helper methods to reference Piece at pos
     def [](pos)
         raise 'invalid pos' if !valid_pos?(pos)
     
@@ -32,11 +34,12 @@ class Board
         @rows[row][col] = piece
     end
 
+    # checks given pos is between 0, 7
     def valid_pos?(pos)
         pos.all? { |coordinate| coordinate.between?(0, 7)}
     end
 
-
+    # checks if given [row,col] = pos of Piece is empty? points to empty? Piece method
     def empty?(pos)
         self[pos].empty?
     end
@@ -92,9 +95,5 @@ class Board
         end
     end
 
-
 end
 
-
-b = Board.new
-p b.rows
