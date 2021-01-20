@@ -14,21 +14,34 @@ module Sliding_Pieces
     ].freeze
 
     def horizontal_dirs
-        # Stores CONSTANT of all horz moves .freeze 
-
+        HORIZONTAL_DIRS
+        
     end
 
     def diagonal_dirs
-        # Stores CONSTANT of all diag moves .freeze
+        DIAGONAL_DIRS
     end
 
     def moves
         moves = []
-
+        move_dirs.each do |x , y|
+            p "x: #{x}   & y: #{y}"
+            
+        end
         # this method below references the object reference of the Piece(queen, king, rook)'s method of move_dir
         # move_dir of the object piece stores either (def horizontal_dirs or def diagonal_dirs) in this current method
         # move_dirs.each do |x,y|
-            grow_unblocked_moves_in_dir()
+            # grow_unblocked_moves_in_dir()
+
+            # create array to collect moves
+
+    # iterate over each of the directions in which a slideable piece can move
+      # use the Piece subclass' `#move_dirs` method to get this info
+      # for each direction, collect all possible moves in that direction
+        # and add them to your moves array 
+        # (use the `grow_unblocked_moves_in_dir` helper method)
+
+    # return the final array of moves (containing all possible moves in all directions)
     end
 
     private
