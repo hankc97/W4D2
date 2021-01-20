@@ -1,8 +1,21 @@
 module Sliding_Pieces
+    HORIZONTAL_DIRS = [
+        [1, 0], # Up
+        [-1, 0], # Down
+        [0, -1], # left
+        [0, 1], # Right
+    ].freeze
 
+    DIAGONAL_DIRS = [
+        [1, -1], # UP LEFT
+        [1, 1], # UP RIGHT
+        [-1, -1], # DOWN LEFT
+        [-1, 1], # DOWN RIGHT
+    ].freeze
 
     def horizontal_dirs
         # Stores CONSTANT of all horz moves .freeze 
+
     end
 
     def diagonal_dirs
@@ -10,7 +23,6 @@ module Sliding_Pieces
     end
 
     def moves
-
         moves = []
 
         # this method below references the object reference of the Piece(queen, king, rook)'s method of move_dir
