@@ -9,7 +9,7 @@ class Employee
     end
 
     def bonus(multiplier)
-        bonus = (self.salary) * multiplier
+        self.salary * multiplier
     end
 end
 
@@ -25,18 +25,12 @@ class Manager < Employee
     end
 
     def bonus(multiplier)
-        employees_salary = 0
+        self.total_salaries * 
 
-        @employees.each do |employee|
-            if employee.kind_of?(Manager)
-                employees_salary += employee.employees.bonus(multiplier)
-                employees_salary += self.salary
-            else
-                employees_salary+=employee.salary
-            end
-        end 
-        bonus = employees_salary * multiplier
+        
     end
+
+    def get_total_salaries 
 
 end
 
