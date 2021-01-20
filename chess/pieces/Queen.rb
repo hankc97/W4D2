@@ -7,4 +7,8 @@ class Queen < Piece
         horizontal_dirs
     end
 
+    def symbol
+        "♕"
+    end
+
 end

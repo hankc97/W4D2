@@ -3,7 +3,7 @@ class Bishop < Piece
     include Sliding_Pieces
     
     def symbol
-
+        "♗"
     end
 
     def move_dirs

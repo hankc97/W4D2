@@ -6,4 +6,7 @@ class Rook < Piece
         horizontal_dirs
     end
 
+    def symbol
+        "♖"
+    end
 end

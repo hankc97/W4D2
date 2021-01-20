@@ -57,6 +57,12 @@ class Board
         new_board
     end
 
+    # def inspect
+    #     value.inspect
+    # end question?
+    
+
+
 
 
     private
